@@ -1,0 +1,209 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 8pt;
+    font-family: Tahoma;
+    background-image: url('images/background.png');
+
+    /* Temp Delete Later min-height: 100vh;*/
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+#banner {
+    height: 50px;
+    background-image: url('images/bannerbackground.png');
+    background-repeat: repeat-x;
+    text-align: left;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#main-content-area {
+    width: 800px;
+    border: 4px solid gray;
+    margin: 0 auto;
+
+    /* Grid Layout*/
+    display: grid;
+    grid-template-columns: 1fr 250px;
+
+    
+    max-width: 100%; 
+    box-sizing: border-box;
+}
+
+/* Ratings Banner */
+#rating-banner{
+    background-image: url('images/rottenbackground.png');
+    background-repeat: repeat-x;
+    height: 83px;
+
+    /* Flex */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+#movie-score{
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+#total-reviews{
+    font-size: 8pt;
+    color: white;
+
+    align-self: flex-end;
+    padding-bottom: 10px;
+}
+
+#rotten-big{
+    height: 83px;
+    width: auto;
+}
+
+/* Reviews Columns*/
+
+#reviews-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.reviews-column {
+    box-sizing: border-box;
+    width: 47%;
+}
+
+/* Reviews Main Section*/
+.review-container{
+    box-sizing: border-box;
+
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.review-main {
+    background-color: #E1D697; /* This rule paints the box... but then you remove it...*/
+    border: 2px solid gray;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.fresh-logo {
+    float: left;
+    margin: 3px;
+}
+
+.review-text {
+    font-size: 8pt;
+    font-weight: bold;
+    font-family: Tahoma;
+    gap: 4px;
+}
+
+.reviewer-publication {
+    font-style: italic;
+}
+
+/* Movie Overview*/
+#overview{
+    background-color: #A2B964;
+    width: 250px;   
+
+    display: flex;
+    flex-direction: column;
+}
+
+#overview img {
+    width: 100%;
+    height: auto;
+}
+
+#overview dt {
+    font-weight: bold;
+}
+
+#tmnt-link {
+    text-align: center;
+    display: block;
+}
+
+
+dt {
+    margin-top: 10px;
+    font-weight: bold; 
+}
+
+
+
+
+/* Total Movies */
+#reviews-showing {
+    background-color: #A2B964;
+    width: 100%; /* changed from 800px */
+    padding: 5px 0;
+    
+    text-align: center;
+
+    grid-column: span 2;
+
+    
+    box-sizing: border-box;
+}
+
+/* W3C Links */
+
+#W3C-links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Media Query*/
+@media (max-width: 700px) {
+    #main-content-area {
+        grid-template-columns: 1fr;
+
+        margin: 0 auto;
+        display: block;
+        
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #reviews-container {
+        flex-direction: column;
+    }
+
+    .reviews-column {
+        width: 100%;
+    }
+
+    #overview {
+        width: 100%;
+    }
+
+    #reviews-showing {
+        width: 100%;
+        grid-column: span 1;
+    }
+}
